@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float playerSpeed = 2;
     public float horizontalSpeed = 3;
     public float rightLimit = 5.5f;
-    public float leftLimit = -5.5f;
+    public float leftLimit = - 5.5f;
 
     void Update()
     {
@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
                 transform.Translate(Vector3.left * Time.deltaTime * horizontalSpeed);
             }
         }
+
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             if (this.gameObject.transform.position.x < rightLimit)
