@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class CollectCoin : MonoBehaviour
 {
-    public AudioSource coinfX;
+    [SerializeField] AudioSource coinFX;
 
     void OnTriggerEnter(Collider other)
     {
-        coinfX.Play();
+        coinFX.Play();
         this.gameObject.SetActive(false);
     }
+
 }
